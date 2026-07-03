@@ -18,8 +18,8 @@ export const TaskList = ({
         <TaskItem
           key={task.id}
           task={task}
-          onToggleTask={onToggleTask}
-          onRenameTask={onRenameTask}
+          onToggleTask={() => onToggleTask(task.id)}
+          onRenameTask={(title) => onRenameTask(task.id, title)}
         />
       ))}
     </ul>
