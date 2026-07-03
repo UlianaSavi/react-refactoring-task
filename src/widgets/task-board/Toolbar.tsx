@@ -1,3 +1,5 @@
+import { Input, Label } from "../../shared";
+
 type ToolbarProps = {
   search: string;
   showDone: boolean;
@@ -13,20 +15,20 @@ export const Toolbar = ({
 }: ToolbarProps) => {
   return (
     <section className="toolbar">
-      <input
+      <Input
         type="text"
         value={search}
         onChange={(event) => onSearchChange(event.target.value)}
         placeholder="Search tasks..."
       />
-      <label>
-        <input
+      <Label>
+        <Input
           type="checkbox"
           checked={showDone}
           onChange={(event) => onShowDoneChange(event.target.checked)}
         />
         Show done tasks
-      </label>
+      </Label>
     </section>
   );
 };

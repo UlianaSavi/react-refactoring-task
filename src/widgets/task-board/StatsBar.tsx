@@ -1,4 +1,4 @@
-import { formatNumber } from "../../shared";
+import { formatNumber, Text } from "../../shared";
 
 type StatsBarProps = {
   total: number;
@@ -8,9 +8,9 @@ type StatsBarProps = {
 export const StatsBar = ({ total, done }: StatsBarProps) => {
   return (
     <section className="stats">
-      <p>Total: {formatNumber(total)}</p>
-      <p>Done: {formatNumber(done)}</p>
-      <p>Open: {formatNumber(total - done)}</p>
+      <Text>Total: {formatNumber(total)}</Text>
+      <Text>Done: {formatNumber(done)}</Text>
+      <Text>Open: {formatNumber(total - done)}</Text>
     </section>
   );
 };

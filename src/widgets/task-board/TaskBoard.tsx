@@ -1,4 +1,5 @@
 import type { PropsWithChildren } from "react";
+import { Heading } from "../../shared";
 import { StatsBar } from "./StatsBar";
 import { Toolbar } from "./Toolbar";
 
@@ -22,7 +23,7 @@ export const TaskBoard = ({
 }: TaskBoardProps) => {
   return (
     <main className="layout">
-      <h1>Ops Tasks Dashboard</h1>
+      <Heading variant="h1">Ops Tasks Dashboard</Heading>
       <StatsBar total={total} done={done} />
       <Toolbar
         search={search}

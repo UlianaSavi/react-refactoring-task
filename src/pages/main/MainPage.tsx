@@ -3,10 +3,12 @@ import { createSeedTasks } from "../../entities/task/model";
 import { TaskList } from "../../entities/task/ui";
 import { TaskBoard } from "../../widgets/task-board";
 
+const INITIAL_TASKS_COUNT = 1200;
+
 export const MainPage = () => {
   const [search, setSearch] = useState("");
   const [showDone, setShowDone] = useState(true);
-  const [tasks, setTasks] = useState(() => createSeedTasks(1200));
+  const [tasks, setTasks] = useState(() => createSeedTasks(INITIAL_TASKS_COUNT));
 
   const visibleTasks = useMemo(() => {
     const query = search.trim().toLowerCase();
