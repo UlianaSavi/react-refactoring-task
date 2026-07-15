@@ -14,9 +14,9 @@ export const TaskList = ({
 }: TaskListProps) => {
   return (
     <ul className="task-list">
-      {tasks.map((task) => (
+      {tasks.map((task, index) => (
         <TaskItem
-          key={task.id}
+          key={index}
           task={task}
           onToggleTask={() => onToggleTask(task.id)}
           onRenameTask={(title) => onRenameTask(task.id, title)}
